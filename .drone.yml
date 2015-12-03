@@ -4,7 +4,7 @@ publish:
     password: $$DOCKER_PASSWORD
     email: $$DOCKER_EMAIL
     repo: andyet/node
-    tag: latest
+    tag: "$$BRANCH"
 notify:
   slack:
     webhook_url: $$SLACK_HOOK
