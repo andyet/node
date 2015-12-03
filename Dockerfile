@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ENV NODE_VER 5.1.0
+ENV NODE_VER 0.10.40
 
 RUN apk --update add build-base python linux-headers && \
     wget -qO /tmp/node.tar.gz http://nodejs.org/dist/v${NODE_VER}/node-v${NODE_VER}.tar.gz && \
@@ -8,6 +8,7 @@ RUN apk --update add build-base python linux-headers && \
     tar zxf node.tar.gz && \
     cd node-v${NODE_VER} && \
     ./configure && \
+    sed -i 's/__USE_MISC/_GNU_SOURCE/g' deps/uv/src/fs-poll.c && \
     make && \
     make install && \
     npm i -g npm && \
