@@ -1,0 +1,12 @@
+publish:
+  docker:
+    username: $$DOCKER_USERNAME
+    password: $$DOCKER_PASSWORD
+    email: $$DOCKER_EMAIL
+    repo: andyet/node
+    tag: latest
+notify:
+  slack:
+    webhook_url: $$SLACK_HOOK
+    channel: alerts
+    username: drone
