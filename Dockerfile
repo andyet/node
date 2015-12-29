@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ENV NODE_VER 5.1.1
+ENV NODE_VER 5.3.0
 
 RUN apk --update add build-base python linux-headers && \
     wget -qO /tmp/node.tar.gz http://nodejs.org/dist/v${NODE_VER}/node-v${NODE_VER}.tar.gz && \
