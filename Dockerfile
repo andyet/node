@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ENV NODE_VER 4.4.7
+ENV NODE_VER 4.6.1
 
 RUN apk --update add build-base python linux-headers binutils-gold && \
     wget -qO /tmp/node.tar.gz http://nodejs.org/dist/v${NODE_VER}/node-v${NODE_VER}.tar.gz && \
